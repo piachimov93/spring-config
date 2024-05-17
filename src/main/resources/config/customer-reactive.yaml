@@ -1,0 +1,23 @@
+server:
+  port: 8089
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8070/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 5
+
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://database:5432/customer_db
+    username: customer_user
+    password: password
+    properties:
+      lock_timeout: 40000
+      statement_timeout: 40000
+      idle_in_transaction_session_timeout: 40000
+      connectTimeout: PT55S

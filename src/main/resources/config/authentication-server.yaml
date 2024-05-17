@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: authentication-server
+jwt:
+  signing:
+    key: ymLTU8rq83rtghtdfhthgbe56e46rbtbhfbe45ybe6rtybv5e6rtvhrtcx54s5ert34ertxa34w
+auth:
+    server:
+        base:
+            url: http://localhost:8080

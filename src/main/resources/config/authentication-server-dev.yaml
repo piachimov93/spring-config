@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: authentication-server
+  datasource:
+    url: jdbc:postgresql://databaseUser:5432/user_db
+    username: root
+    password: password
+    driver-class-name: org.postgresql.Driver
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server:8070/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 5
+jwt:
+  signing:
+    key: ymLTU8rq83rtghtdfhthgbe56e46rbtbhfbe45ybe6rtybv5e6rtvhrtcx54s5ert34ertxa34w
+
+user:
+  service:
+    base:
+      url: http://localhost:8888
+
+
